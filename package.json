@@ -1,0 +1,32 @@
+{
+  "name": "pomodoro",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "dev": "webpack serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kartikdhiman/pomodoro.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kartikdhiman/pomodoro/issues"
+  },
+  "homepage": "https://github.com/kartikdhiman/pomodoro#readme",
+  "devDependencies": {
+    "css-loader": "^5.0.1",
+    "sass": "^1.32.4",
+    "sass-loader": "^10.1.1",
+    "style-loader": "^2.0.0",
+    "ts-loader": "^8.0.14",
+    "typescript": "^4.1.3",
+    "webpack": "^5.15.0",
+    "webpack-cli": "^4.3.1",
+    "webpack-dev-server": "^3.11.2"
+  }
+}
