@@ -1,9 +1,9 @@
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: './src/scripts/app.ts',
   output: {
-    publicPath: "/dist/",
     filename: 'main.js',
     path: path.resolve(__dirname, 'dist'),
   },
@@ -13,11 +13,11 @@ module.exports = {
         test: /\.scss$/i,
         use: [
           // Creates `style` nodes from JS strings
-          "style-loader",
+          'style-loader',
           // Translates CSS into CommonJS
-          "css-loader",
+          'css-loader',
           // Compiles Sass to CSS
-          "sass-loader",
+          'sass-loader',
         ],
       },
       {
@@ -25,13 +25,17 @@ module.exports = {
         use: 'ts-loader',
         exclude: /node_modules/,
       },
-
     ],
   },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: './src/index.html',
+    }),
+  ],
   devServer: {
-    contentBase: path.join(__dirname, 'public'),
+    contentBase: './dist',
     compress: true,
-    port: 9000
+    port: 9000,
   },
   mode: 'development',
 };
