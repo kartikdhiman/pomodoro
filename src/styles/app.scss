@@ -1,4 +1,6 @@
 @import "colors";
+@import "generic";
+@import "margins";
 
 body {
   margin: 0;
@@ -6,16 +8,23 @@ body {
 }
 
 .container {
-  display: flex;
-  flex-direction: column;
   height: 100vh;
   width: 100vw;
+  color: $color-primary-text;
 }
 
-.justify-content-center {
-  justify-content: center;
+.control {
+  font-size: 1.5rem;
+  letter-spacing: 0.75rem;
+  text-align: center;
+  font-weight: 600;
+
+  &:hover {
+    color: $color-accent;
+    cursor: pointer;
+  }
 }
 
-.align-content {
-  align-content: center;
+.font_5 {
+  font-size: 5rem;
 }
